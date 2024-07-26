@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFD Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>The First Descendant HP / Defense Calculator</h1>
+    <p>This tool helps you compare effective HP with different HP / Defense combinations.</p>
+    <p>The question mark button next to each field is unlocked when the other 3 fields are filled. It calculates the value required in that field to make both combinations have equal effective HP.</p>
+
+    <div class="input-row">
+        <div class="input-group">
+            <h3>Combination #1</h3>
+            <label for="hp1">HP:</label>
+            <input type="number" min="0" step="100" id="hp1" placeholder="HP">
+            <button class="missingcalc" id="hp1calc" onclick="calchp1()" disabled>?</button>
+            <br>
+            <label for="def1">Def:</label>
+            <input type="number" min="0" step="1000" id="def1" placeholder="DEF">
+            <button class="missingcalc" id="def1calc" onclick="calcdef1()" disabled>?</button>
+            <br>
+            <div class="result" id="comb1result"></div>
+        </div>
+
+        <div class="input-group">
+            <h3>Combination #2</h3>
+            <label for="hp2">HP:</label>
+            <input type="number" min="0" step="100" id="hp2" placeholder="HP">
+            <button class="missingcalc" id="hp2calc" onclick="calchp2()" disabled>?</button>
+            <br>
+            <label for="def2">Def:</label>
+            <input type="number" min="0" step="1000" id="def2" placeholder="DEF">
+            <button class="missingcalc" id="def2calc" onclick="calcdef2()" disabled>?</button>
+            <br>
+            <div class="result" id="comb2result"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
