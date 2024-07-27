@@ -148,7 +148,7 @@ function calchp2() {
     var def1val = def1.value;
     var def2val = def2.value;
     othereffective = calculateEffectiveHP(hp1val, def1val);
-    hp2.value = calculateDefForEffective(def2val, othereffective);
+    hp2.value = calculateHPForEffective(def2val, othereffective);
     hp2.dispatchEvent(new Event('input'));
 }
 function calcdef2() {
